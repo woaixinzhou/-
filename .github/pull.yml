@@ -1,5 +1,5 @@
 version: "1"
 rules:
-  - base: master
-    upstream: sazs34/MyActions:master
+  - base: main
+    upstream: dajijiyangmao:main
     mergeMethod: hardreset
