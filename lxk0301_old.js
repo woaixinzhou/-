@@ -17,7 +17,7 @@ async function downFile() {
 }
 
 async function changeFiele(content, cookie) {
-    let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
+    let newContent = content.replace("require('./Agents of S.H.I.E.L.D. Season 6.js')", JSON.stringify({ CookieJD: cookie }));
     await fs.writeFileSync("./lxk0301_old.js", newContent, "utf8");
 }
 
