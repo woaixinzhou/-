@@ -40,7 +40,7 @@ async function downFile() {
 async function changeFiele(content, cookie) {
     console.log(JSON.stringify(process.env))
      let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
-     newContent = newContent.replace("require('GITHUB')","UUUUUUUSSSSSAAAAA"  }));
+     newContent = newContent.replace("GITHUB","UUUUUUUSSSSSAAAAA");
     //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
      console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
      console.log(newContent);
