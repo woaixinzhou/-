@@ -21,5 +21,5 @@ jobs:
               run: npm install
             - run: node DJSN.js
               env:
-                  SYNCURL: ${{ secrets.SYNCURL }}
+                  SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
