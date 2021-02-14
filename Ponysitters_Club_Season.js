@@ -29,6 +29,7 @@ const download = require("download");
 // 公共变量
 const JD_COOKIE = process.env.JD_COOKIE; //cokie,多个用&隔开即可
 const SyncUrl = process.env.SYNCURL; //签到地址,方便随时变动
+
 let CookieJDs = [];
 
 async function downFile() {
@@ -37,7 +38,9 @@ async function downFile() {
 }
 
 async function changeFiele(content, cookie) {
-    let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
+    console.log(JSON.stringify(process.env))
+     let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
+     newContent = content.replace("require('GITHUB')","UUUUUUUSSSSSAAAAA"  }));
     //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
      console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
      console.log(newContent);
