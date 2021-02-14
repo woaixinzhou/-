@@ -12,6 +12,7 @@ const SyncUrl = process.env.SYNCURL; //签到地址,方便随时变动
 let CookieJDs = [];
 
 async function downFile() {
+     console.log("开始下载"+SyncUrl+"代码");
     await download(SyncUrl, "./",{filename:'temp.js'});
 }
 
