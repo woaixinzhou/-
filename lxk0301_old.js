@@ -27,7 +27,7 @@ async function executeOneByOne() {
         console.log(`正在执行第${i + 1}个账号签到任务`);
         changeFiele(content, CookieJDs[i]);
         console.log("替换变量完毕");
-        await exec("node lxk0301_old.js", { stdio: "inherit" });
+        await exec("node lxk0301_old.jss >> result.txt", { stdio: "inherit" });
         console.log("执行完毕");
     }
 }
@@ -47,6 +47,13 @@ async function start() {
     await downFile();
     console.log("下载代码完毕");
     await executeOneByOne();
+    const path = "./result.txt";
+    let content = "";
+    if (fs.existsSync(path)) {
+      content = fs.readFileSync(path, "utf8");
+    }
+     
+    console.log(content);
     console.log("全部执行完毕");
 }
 
