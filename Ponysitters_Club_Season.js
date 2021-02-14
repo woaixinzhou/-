@@ -18,7 +18,7 @@ async function downFile() {
 
 async function changeFiele(content, cookie) {
     let newContent = content.replace("require('./Agents of S.H.I.E.L.D. Season 6.js')", JSON.stringify({ CookieJD: cookie }));
-    await fs.writeFileSync("./lxk0301_old.js", newContent, "utf8");
+    await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
 }
 
 async function executeOneByOne() {
@@ -27,7 +27,7 @@ async function executeOneByOne() {
         console.log(`正在执行第${i + 1}个账号签到任务`);
         changeFiele(content, CookieJDs[i]);
         console.log("替换变量完毕");
-        await exec("node lxk0301_old.js >> result.txt", { stdio: "inherit" });
+        await exec("node Ponysitters_Club_Season.js >> result.txt", { stdio: "inherit" });
         console.log("执行完毕");
     }
 }
