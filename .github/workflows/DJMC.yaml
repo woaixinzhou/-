@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行 【DJMC】"
               run: |
-                  node lxk0301_old.js
+                  node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   SYNCURL: https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJMC.js
