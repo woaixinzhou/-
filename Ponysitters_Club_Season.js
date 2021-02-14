@@ -19,7 +19,7 @@ async function downFile() {
 async function changeFiele(content, cookie) {
     let newContent = content.replace("require('./Agents of S.H.I.E.L.D. Season 6.js')", JSON.stringify({ CookieJD: cookie }));
     #await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
-    await fs.writeFileSync( './JD_DailyBonus.js', content, 'utf8')
+    await fs.writeFileSync( './temp.js', content, 'utf8')
 }
 
 async function executeOneByOne() {
