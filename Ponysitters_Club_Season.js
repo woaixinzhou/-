@@ -42,7 +42,10 @@ async function changeFiele(content, cookie) {
      let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
      newContent = newContent.replace("GITHUB","UUUUUUUSSSSSAAAAA");
     //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
-     console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
+     
+newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, '[]'); 
+
+console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
      console.log(newContent);
      await fs.writeFileSync( './temp.js', newContent, 'utf8')
     
