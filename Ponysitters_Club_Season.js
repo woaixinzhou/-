@@ -27,8 +27,8 @@ const fs = require("fs");
 const download = require("download");
 
 // 公共变量
-const JD_COOKIE = process.env.JD_COOKIE; //cokie,多个用&隔开即可
-const SyncUrl = process.env.SYNCURL; //签到地址,方便随时变动
+const JD_COOKIE = process.env.JD_COOKIE; //
+const SyncUrl = process.env.SYNCURL; //
 
 let CookieJDs = [];
  let hcodestr="";
@@ -46,8 +46,8 @@ async function changeFiele(content, cookie) {
      
 newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, shareCodes); 
 
-console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
-     console.log(newContent);
+
+    
      await fs.writeFileSync( './temp.js', newContent, 'utf8')
     
 }
@@ -74,10 +74,10 @@ async function start() {
         return;
     }
   
- console.log(SYNCURL)
-   if (SYNCURL) {
-   if (SYNCURL.indexOf(".js")>0) {
-     hcodestr=SYNCURL.substr(SYNCURL.indexOf(".js")-4,4)+"_CODE";   }
+ console.log(SyncUrl)
+   if (SyncUrl) {
+   if (SyncUrl.indexOf(".js")>0) {
+     hcodestr=SyncUrl.substr(SyncUrl.indexOf(".js")-4,4)+"_CODE";   }
 
 }
  if (hcodestr) {
