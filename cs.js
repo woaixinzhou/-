@@ -1515,7 +1515,8 @@ function requireConfig() {
     // console.log('\n开始获取东东超市配置文件\n')
     notify = $.isNode() ? require('./sendNotify') : '';
     //Node.js用户请在jdCookie.js处填写京东ck;
-    const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
+    const JD_COOKIE = process.env.JD_COOKIE; //
+    const jdCookieNode = $.isNode() ? JD_COOKIE : '';
     //IOS等用户直接用NobyDa的jd cookie
     if ($.isNode()) {
       Object.keys(jdCookieNode).forEach((item) => {
