@@ -30,6 +30,19 @@ const download = require("download");
 const JD_COOKIE = process.env.JD_COOKIE; //
 const SyncUrl = process.env.SYNCURL; //
 const Efork = process.env.EFORK; //
+const BARK_PUSH = process.env.BARK_PUSH; //
+const PUSH_KEY = process.env.PUSH_KEY; //
+const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN; //
+const TG_USER_ID = process.env.TG_USER_ID; //
+
+
+
+
+
+
+
+
+
 let CookieJDs = [];
  let hcodestr="";
 let shareCodes=[];
