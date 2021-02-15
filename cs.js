@@ -1525,6 +1525,7 @@ function requireConfig() {
       JD_COOKIE=process.env.JD_COOKIE.split('&');
    else if (process.env.JD_COOKIE.indexOf('@')>-1)  
      JD_COOKIE=process.env.JD_COOKIE.split('@');
+    else JD_COOKIE=process.env.JD_COOKIE;
 }  
     
     const jdCookieNode = $.isNode() ? JD_COOKIE: '';
