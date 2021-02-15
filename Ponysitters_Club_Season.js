@@ -31,7 +31,8 @@ const JD_COOKIE = process.env.JD_COOKIE; //cokie,多个用&隔开即可
 const SyncUrl = process.env.SYNCURL; //签到地址,方便随时变动
 
 let CookieJDs = [];
-
+ let hcodestr="";
+let shareCodes=[];
 async function downFile() {
      console.log("开始下载"+SyncUrl+"代码");
     await download(SyncUrl, "./",{filename:'temp.js'});
@@ -43,7 +44,7 @@ async function changeFiele(content, cookie) {
      newContent = newContent.replace("GITHUB","UUUUUUUSSSSSAAAAA");
     //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
      
-newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, '[]'); 
+newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, shareCodes); 
 
 console.log("GOOOOOOOOOOOOOOOOOOOOOOOO");
      console.log(newContent);
@@ -72,6 +73,22 @@ async function start() {
         console.log("请填写 SYNCURL 后在继续");
         return;
     }
+  
+ console.log(SYNCURL)
+   if (SYNCURL) {
+   if (SYNCURL.indexOf(".js")>0) {
+     hcodestr=SYNCURL.substr(SYNCURL.indexOf(".js")-4,4)+"_CODE";   }
+
+}
+ if (hcodestr) {
+  if (process.env[hcodestr].indexOf('&')>-1)
+      shareCodes=(process.env[hcodestr]).split('&');
+   else if (process.env[hcodestr].indexOf('@')>-1)  
+     shareCodes=(process.env[hcodestr]).split('@');
+}  
+ console.log("你的互助码:"+JSON.stringify(shareCodes))
+     
+     
     CookieJDs = JD_COOKIE.split("&");
     console.log(`当前共${CookieJDs.length}个账号需要签到`);
     // 下载最新代码
