@@ -57,7 +57,7 @@ async function changeFiele(content, cookie) {
      newContent = newContent.replace(Efork,'Efork');
     //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
      
-newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, shareCodes); 
+newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, JSON.stringify(shareCodes)); 
 
 
     
