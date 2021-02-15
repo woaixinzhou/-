@@ -103,6 +103,8 @@ async function start() {
       shareCodes=(process.env[hcodestr]).split('&');
    else if (process.env[hcodestr].indexOf('@')>-1)  
      shareCodes=(process.env[hcodestr]).split('@');
+  else
+   shareCodes=process.env[hcodestr];
 }  
  console.log("你的互助码:"+JSON.stringify(shareCodes))
      
