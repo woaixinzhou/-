@@ -130,11 +130,11 @@ Lucille looked at her watch.
 Devotion like this was something beyond his outlook.
  */
 const $ = new Env('东东工厂');
-const JD_COOKIE = process.env.JD_COOKIE; //cokie,多个用&隔开即可
+//const JD_COOKIE = process.env.JD_COOKIE; //cokie,多个用&隔开即可
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
-const jdCookieNode = $.isNode() ? {"CookieJD":JD_COOKIE} : '';
+const jdCookieNode = $.isNode() ? {"CookieJD":process.env.JD_COOKIE} : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
 const randomCount = $.isNode() ? 20 : 5;
 //IOS等用户直接用NobyDa的jd cookie
