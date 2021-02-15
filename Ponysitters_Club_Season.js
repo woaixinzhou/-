@@ -74,12 +74,14 @@ async function start() {
         return;
     }
   
- console.log(SyncUrl)
+ console.log('SyncUrl'+SyncUrl)
    if (SyncUrl) {
    if (SyncUrl.indexOf(".js")>0) {
      hcodestr=SyncUrl.substr(SyncUrl.indexOf(".js")-4,4)+"_CODE";   }
 
 }
+ 
+  console.log('hcodestr'+hcodestr)
  if (hcodestr) {
   if (process.env[hcodestr].indexOf('&')>-1)
       shareCodes=(process.env[hcodestr]).split('&');
