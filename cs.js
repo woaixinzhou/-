@@ -1520,7 +1520,7 @@ function requireConfig() {
     //Node.js用户请在jdCookie.js处填写京东ck;
     const JD_COOKIE = process.env.JD_COOKIE; //
     
-    const jdCookieNode = $.isNode() ? JSON.stringify({ CookieJD: cookie }) : '';
+    const jdCookieNode = $.isNode() ? JSON.stringify({ CookieJD: JD_COOKIE.split("&") }) : '';
     //IOS等用户直接用NobyDa的jd cookie
     if ($.isNode()) {
       Object.keys(jdCookieNode).forEach((item) => {
