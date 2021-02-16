@@ -6,7 +6,7 @@
 #活动时间：2021年1月28日～2021年2月28日
 #更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js
 
-name: xgyl
+name: 小鸽有礼
 
 on:
     # push:
@@ -28,7 +28,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【xgyl】"
+            - name: "运行 【小鸽有礼】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
