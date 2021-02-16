@@ -8,6 +8,7 @@ on:
     #         - master
     schedule:
         - cron: "5 1 * * *"
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
               run: |
                   node Ponysitters_Club_Season.js
               env:
-                  SYNCURL: https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_sign.js
+                  SYNCURL: https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/The.Flash/The.Flash/bea0n_sig0n.js
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
