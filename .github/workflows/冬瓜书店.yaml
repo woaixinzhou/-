@@ -10,7 +10,7 @@ on:
     #         - main
     schedule:
         - cron: "5 0,4,10 * * *"
-
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
