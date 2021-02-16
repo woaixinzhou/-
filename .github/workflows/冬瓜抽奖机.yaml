@@ -6,7 +6,7 @@
 #author：yangtingxiao
 #github： https://github.com/yangtingxiao
 
-name: 冬瓜抽奖机.
+name: 冬瓜抽奖机
 
 on:
     # push:
@@ -28,7 +28,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【冬瓜抽奖机.】"
+            - name: "运行 【冬瓜抽奖机】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
