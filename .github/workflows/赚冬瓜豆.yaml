@@ -5,7 +5,7 @@
 #更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_syj.js
 #参考github@jidesheng6修改而来
 
-name: zhuanjingdou_syj
+name: 赚冬瓜豆
 
 on:
     # push:
@@ -27,7 +27,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【zhuanjingdou_syj】"
+            - name: "运行 【赚冬瓜豆】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
