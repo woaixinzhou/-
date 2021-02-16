@@ -9,7 +9,7 @@ on:
     #         - main
     schedule:
         - cron: "5 22,4,10 * * *"
-
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
