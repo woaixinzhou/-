@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+https://github.com/dajijiyangmao/UFO/tree/main/HAOYANGMAO
+
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJDC.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJGJ.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJMC.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJMH.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJNC.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJZD.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/XJJC.js
+https://raw.githubusercontent.com/dajijiyangmao/UFO/main/HAOYANGMAO/DJSM.js
+
+
+
+
+
+
+
 三十六计的英语翻译
 文章来源： 文章作者： 发布时间：2007-12-04 00:58 
 (单词翻译:双击或拖选)
