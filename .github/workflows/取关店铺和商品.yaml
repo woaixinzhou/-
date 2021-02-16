@@ -8,7 +8,7 @@
 #现有功能: 1、取关商品。2、取关店铺
 #大佬脚本地址 https://gitee.com/lxk0301/jd_scripts/raw/master/jd_unsubscribe.js
 
-name: unsubscribe
+name: 取关店铺和商品
 
 on:
     # push:
@@ -30,7 +30,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【unsubscribe】"
+            - name: "运行 【取关店铺和商品】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
