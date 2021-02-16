@@ -11,7 +11,7 @@ on:
     #         - main
     schedule:
         - cron: "20 15 * * *"
-
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: https://gitee.com/lxk0301/jd_scripts/raw/master/jd_club_lottery.js
+                  SYNCURL: https://github.com/dajijiyangmao/UFO/raw/main/HAOYANGMAO/The.Flash/The.Flash/j00d_club_lo0ttery.js
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
