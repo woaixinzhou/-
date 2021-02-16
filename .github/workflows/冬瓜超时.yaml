@@ -6,7 +6,7 @@ name: 冬瓜超时
 on:
   schedule:
     - cron: '15 */4 * * *'
-
+  workflow_dispatch:
 jobs:
   build:
 
