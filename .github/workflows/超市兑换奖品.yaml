@@ -4,7 +4,7 @@
 #感谢@yangtingxiao提供PR
 #更新时间：2020-12-24
 
-name: blueCoin
+name: 超市兑换奖品
 
 on:
     # push:
@@ -26,7 +26,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【blueCoin】"
+            - name: "运行 【超市兑换奖品】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
