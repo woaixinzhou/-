@@ -164,6 +164,7 @@ async function changeFile (content) {
   if (process.env.JD_BEAN_STOP && process.env.JD_BEAN_STOP !== '0') {
     newContent = newContent.replace(/var stop = '0'/, `var stop = '${process.env.JD_BEAN_STOP}'`);
   }
+console.log(newContent)
   const zone = new Date().getTimezoneOffset();
   if (zone === 0) {
     //此处针对UTC-0时区用户做的
