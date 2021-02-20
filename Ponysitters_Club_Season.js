@@ -61,13 +61,13 @@ async function changeFiele(content, cookie) {
      newContent = content.replace(`require('./jdCookie.js')`, JSON.stringify({ CookieJD: cookie }));
           
      newContent = newContent.replace(Efork,'Efork');
-    //await fs.writeFileSync("./Ponysitters_Club_Season.js", newContent, "utf8");
-     
-newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, JSON.stringify(shareCodes)); 
-
-
     
-     await fs.writeFileSync( './temp.js', newContent, 'utf8')
+    newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, JSON.stringify(shareCodes)); 
+      content = content.replace(/var Key = ''/, `var Key = `+cookie);
+ 
+   
+     
+      await fs.writeFileSync( './temp.js', newContent, 'utf8')
     
 }
 
