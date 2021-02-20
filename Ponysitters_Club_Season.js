@@ -63,7 +63,8 @@ async function changeFiele(content, cookie) {
      newContent = newContent.replace(Efork,'Efork');
     
     newContent = newContent.replace(/require\('.\/(\w+)ShareCodes.js\'\)/g, JSON.stringify(shareCodes)); 
-    newContent =newContent.replace(/var Key = ''/, `var Key = `+cookie);`var Key = '${cookie}'`);
+ 
+    newContent =newContent.replace(/var Key = ''/, `var Key = '${cookie}'`);
  
    
      
