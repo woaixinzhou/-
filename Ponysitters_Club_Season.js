@@ -58,9 +58,9 @@ async function changeFiele(content, cookie) {
 
      let newContent = content.replace("require('./jdCookie.js')", JSON.stringify({ CookieJD: cookie }));
      
-     newContent = content.replace(`require("./jdCookie.js")`, JSON.stringify({ CookieJD: cookie }));
+     newContent = newContent.replace(`require("./jdCookie.js")`, JSON.stringify({ CookieJD: cookie }));
      
-     newContent = content.replace(`require('./jdCookie.js')`, JSON.stringify({ CookieJD: cookie }));
+     newContent = newContent.replace(`require('./jdCookie.js')`, JSON.stringify({ CookieJD: cookie }));
           
      newContent = newContent.replace(Efork,'Efork');
     
