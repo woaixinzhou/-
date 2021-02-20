@@ -12,7 +12,9 @@ Modified From github https://github.com/ruicky/jd_sign_bot
 const $ = new Env('京豆签到');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
-const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
+let JD_COOKIE=[]; //
+JD_COOKIE=process.env.JD_COOKIE.split('&');
+const jdCookieNode = $.isNode() ? JD_COOKIE: '';
 const exec = $.isNode() ? require('child_process').execSync : '';
 const fs = $.isNode() ? require('fs') : '';
 const download = $.isNode() ? require('download') : '';
