@@ -23,6 +23,9 @@ jobs:
             - name: npm install
               run: |
                   npm install
+                  cnpm install
+
+
             - name: "运行 【冬瓜签到.】"
               run: |
                   node 冬瓜钱到.js
