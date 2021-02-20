@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行 【冬瓜签到.】"
               run: |
-                  node Ponysitters_Club_Season.js
+                  node 冬瓜钱到.js
               env:
                   SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
