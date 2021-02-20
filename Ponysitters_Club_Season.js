@@ -30,6 +30,7 @@ const download = require("download");
 const JD_COOKIE = process.env.JD_COOKIE; //
 const SyncUrl = process.env.SYNCURL; //
 const Efork = process.env.EFORK; //
+const SCKEY = process.env.SCKEY; //
 const BARK_PUSH = process.env.BARK_PUSH; //
 const PUSH_KEY = process.env.PUSH_KEY; //
 const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN; //
