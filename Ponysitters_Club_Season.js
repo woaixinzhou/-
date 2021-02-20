@@ -48,7 +48,7 @@ const JOY_FEED_COUNT = process.env.JOY_FEED_COUNT; //宠汪汪🐕喂食
 
 
 let CookieJDs = [];
-
+let shareCodes=[];
 async function downFile() {
    
     await download(SyncUrl, "./",{filename:'temp.js'});
