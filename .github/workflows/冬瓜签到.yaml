@@ -22,8 +22,8 @@ jobs:
                   node-version: "12.x"
             - name: npm install
               run: |
-                  npm install
-                  npm install request -g
+                  #npm install
+                  npm install --save request
             - name: "运行 【冬瓜签到.】"
               run: |
                   node 冬瓜钱到.js
