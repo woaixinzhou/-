@@ -22,7 +22,7 @@ jobs:
                   node-version: "12.x"
             - name: npm install
               run: |
-                  npm install
+                  npm init --yes
                   #cnpm install
 
 
