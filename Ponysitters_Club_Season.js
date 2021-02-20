@@ -27,14 +27,17 @@ const fs = require("fs");
 const download = require("download");
 
 
-const JD_COOKIE = process.env.JD_COOKIE; //
+const JD_COOKIE = process.env.JD_COOKIE; //格式格式格式三遍
 const SyncUrl = process.env.SYNCURL; //
 const Efork = process.env.EFORK; //
-const SCKEY = process.env.SCKEY; //
+const SCKEY = process.env.SCKEY; //SEVER-酱油
 const BARK_PUSH = process.env.BARK_PUSH; //
 const PUSH_KEY = process.env.PUSH_KEY; //
-const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN; //
+const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN; //TG通知比较好用
 const TG_USER_ID = process.env.TG_USER_ID; //
+ 
+//个别参数 懂的自己加
+const JOY_FEED_COUNT = process.env.JOY_FEED_COUNT; //宠汪汪🐕喂食
 
 
 
@@ -45,8 +48,7 @@ const TG_USER_ID = process.env.TG_USER_ID; //
 
 
 let CookieJDs = [];
- let hcodestr="";
-let shareCodes=[];
+
 async function downFile() {
    
     await download(SyncUrl, "./",{filename:'temp.js'});
@@ -77,7 +79,7 @@ async function executeOneByOne() {
     for (var i = 0; i < CookieJDs.length; i++) {
         console.log(`正在执行第${i + 1}个账号签到任务`);
         changeFiele(content, CookieJDs[i]);
-        console.log("替换变量完毕");    //await exec("node Ponysitters_Club_Season.js >> result.txt", { stdio: "inherit" });
+ 
         await exec("node temp.js >> result.txt");
        
     }
@@ -104,17 +106,7 @@ async function start() {
 
 }
  
-  console.log('hcodestr'+hcodestr)
- if (hcodestr && process.env[hcodestr]) {
-  if (process.env[hcodestr].indexOf('&')>-1)
-      shareCodes=(process.env[hcodestr]).split('&');
-   else if (process.env[hcodestr].indexOf('@')>-1)  
-     shareCodes=(process.env[hcodestr]).split('@');
-  else
-   shareCodes=process.env[hcodestr];
-}  
- console.log("你的互助码:"+JSON.stringify(shareCodes))
-     
+  
      
     CookieJDs = JD_COOKIE.split("&");
     console.log(`当前共${CookieJDs.length}个账号需要签到`);
