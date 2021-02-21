@@ -87,22 +87,22 @@ async function executeOneByOne() {
         await exec("node temp.js >> result.txt");
      
        const path = "./result.txt";
-       let content = "";
+       let rcontent = "";
        if (fs.existsSync(path)) {
-      content = fs.readFileSync(path, "utf8");
+          rcontent = fs.readFileSync(path, "utf8");
        }
-     
+ 
          if (SyncUrl.indexOf('JD_DailyBonus')>0) {
-      const notify = $.isNode() ?require('./sendNotify') : '';
-          content=content.substring(content.indexOf('【签到概览】'),content.indexOf('签到用时'))
-           console.log(content);
-          $.msg("京东签到-" + new Date().toLocaleDateString(), content)
+            const notify = $.isNode() ?require('./sendNotify') : '';
+             rcontent=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
+             console.log(rcontent);
+          $.msg("京东签到-" + new Date().toLocaleDateString(), rcontent)
           console.log('发送结果完毕');
           
           
   } else {
-     
-       console.log(content);
+         console.log('JD');
+       console.log(rcontent);
      }
     }
 }
