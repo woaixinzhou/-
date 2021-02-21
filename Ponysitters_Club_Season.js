@@ -103,7 +103,7 @@ async function executeOneByOne() {
              console.log(message);
 
           if ($.isNode()) {
-              subTitle = `【京东账号${$.index}】${$.nickName}`;
+              subTitle = `【京东账号${$.index}】${$.UserName}`;
               await notify.sendNotify(`京东签到通知`, `${subTitle}\n${message}`);
           
            }
