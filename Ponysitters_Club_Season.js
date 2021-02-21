@@ -96,8 +96,11 @@ async function executeOneByOne() {
             const notify = $.isNode() ?require('./sendNotify') : '';
              rcontent=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
              console.log(rcontent);
-             $.msg("京东签到-" + new Date().toLocaleDateString(), '测试下签到')
-          $.msg("京东签到-" + new Date().toLocaleDateString(), rcontent)
+          
+          
+          if ($.isNode()) {
+          await notify.sendNotify("京东签到-" + new Date().toLocaleDateString(), rcontent);
+           }
           console.log('发送结果完毕');
           
           
