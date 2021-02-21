@@ -82,10 +82,14 @@ async function changeFiele(content, cookie) {
 async function executeOneByOne() {
     const content = await fs.readFileSync("./temp.js", "utf8");
     for (var i = 0; i < CookieJDs.length; i++) {
-        console.log(`正在执行第${i + 1}个账号签到任务`);
+        console.log(`正在执行第${i + 1}个账号任务`);
         changeFiele(content, CookieJDs[i]);
- 
-        await exec("node temp.js >> result.txt");
+        $.UserName = decodeURIComponent(CookieJDs[i].match(/pt_pin=(.+?);/) && CookieJDs[i].match(/pt_pin=(.+?);/)[1])
+        $.index = i + 1;
+        $.nickName = '';
+        message = ''
+       console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
+       await exec("node temp.js >> result.txt");
      
        const path = "./result.txt";
        let rcontent = "";
@@ -97,8 +101,7 @@ async function executeOneByOne() {
             const notify = $.isNode() ?require('./sendNotify') : '';
              message=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
              console.log(message);
-             $.UserName = decodeURIComponent(CookieJDs[i].match(/pt_pin=(.+?);/) && CookieJDs[i].match(/pt_pin=(.+?);/)[1])
-             $.index = i + 1;
+
           if ($.isNode()) {
        
              await notify.sendNotify(`京东签到 - 账号${$.index} - ${$.nickName}`, `${subTitle}${message}`);
