@@ -38,6 +38,9 @@ const TG_USER_ID = process.env.TG_USER_ID; //
  
 //个别参数 懂的自己加
 const JOY_FEED_COUNT = process.env.JOY_FEED_COUNT; //宠汪汪🐕喂食
+const JXNCTOKENS = process.env.JXNCTOKENS; //京戏农场种子
+
+
 
 
 
