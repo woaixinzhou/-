@@ -85,7 +85,7 @@ if ($.isNode()) {
 }
 
 if ($.isNode()) {
-   if (process.env.fqkkurl && process.env.RLURL.indexOf('#') > -1) {
+   if (process.env.fqkkurl && process.env.fqkkurl.indexOf('#') > -1) {
    fqkkurlArr = process.env.fqkkurl.split('#');
    console.log(`您选择的是用"#"隔开\n`)
   }
