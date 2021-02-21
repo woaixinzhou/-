@@ -137,7 +137,7 @@ async function start() {
   
      
     CookieJDs = JD_COOKIE.split("&");
-    console.log(`当前共${CookieJDs.length}个账号需要签到`);
+    console.log(`当前共${CookieJDs.length}个账号需要执行任务`);
     
     await downFile();
   
