@@ -84,7 +84,26 @@ if ($.isNode()) {
    minute = (new Date()).getMinutes();
 }
 
-if ($.isNode()) {
+
+
+
+
+
+
+!(async () => {
+  if (typeof $request !== "undefined") {
+    await fqkkck()
+   
+  } else
+  {fqkkurlArr.push($.getdata('fqkkurl'))
+    fqkkhdArr.push($.getdata('fqkkhd'))
+    let fqkkcount = ($.getval('fqkkcount') || '1');
+  for (let i = 2; i <= fqkkcount; i++) {
+    fqkkurlArr.push($.getdata(`fqkkurl${i}`))
+    fqkkhdArr.push($.getdata(`fqkkhd${i}`))
+  }
+   
+   if ($.isNode()) {
    if (process.env.fqkkurl && process.env.fqkkurl.indexOf('#') > -1) {
    fqkkurlArr = process.env.fqkkurl.split('#');
    console.log(`您选择的是用"#"隔开\n`)
@@ -116,22 +135,6 @@ fqtx=process.env.fqtx;
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  }
 
-
-
-
-
-
-!(async () => {
-  if (typeof $request !== "undefined") {
-    await fqkkck()
-   
-  } else {fqkkurlArr.push($.getdata('fqkkurl'))
-    fqkkhdArr.push($.getdata('fqkkhd'))
-    let fqkkcount = ($.getval('fqkkcount') || '1');
-  for (let i = 2; i <= fqkkcount; i++) {
-    fqkkurlArr.push($.getdata(`fqkkurl${i}`))
-    fqkkhdArr.push($.getdata(`fqkkhd${i}`))
-  }
     console.log(`------------- 共${fqkkhdArr.length}个账号-------------\n`)
       for (let i = 0; i < fqkkhdArr.length; i++) {
         if (fqkkhdArr[i]) {
