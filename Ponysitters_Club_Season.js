@@ -85,7 +85,25 @@ async function executeOneByOne() {
         changeFiele(content, CookieJDs[i]);
  
         await exec("node temp.js >> result.txt");
-       
+     
+       const path = "./result.txt";
+       let content = "";
+       if (fs.existsSync(path)) {
+      content = fs.readFileSync(path, "utf8");
+       }
+     
+         if (SyncUrl.indexOf('JD_DailyBonus')>0) {
+      const notify = $.isNode() ?require('./sendNotify') : '';
+          content=content.substring(content.indexOf('【签到概览】'),content.indexOf('签到用时'))
+           console.log(content);
+          $.msg("京东签到-" + new Date().toLocaleDateString(), content)
+          console.log('发送结果完毕');
+          
+          
+  } else {
+     
+       console.log(content);
+     }
     }
 }
 
@@ -118,20 +136,12 @@ async function start() {
     await downFile();
   
     await executeOneByOne();
-    const path = "./result.txt";
-    let content = "";
-    if (fs.existsSync(path)) {
-      content = fs.readFileSync(path, "utf8");
-    }
+  
      
 
-    console.log(content);
+   
     console.log("全部执行完毕");
-  if (SyncUrl.indexOf('JD_DailyBonus')>0) {
-      const notify = $.isNode() ?require('./sendNotify') : '';
-     $.msg("京东签到-" + new Date().toLocaleDateString(), content)
-    console.log('发送结果完毕');
-  }
+
  
 }
 
