@@ -23,6 +23,7 @@
 
 */
 const $ = new Env();
+let message = '', subTitle = '', option = {};
 const exec = require("child_process").execSync;
 const fs = require("fs");
 const download = require("download");
@@ -94,12 +95,14 @@ async function executeOneByOne() {
  
          if (SyncUrl.indexOf('JD_DailyBonus')>0) {
             const notify = $.isNode() ?require('./sendNotify') : '';
-             rcontent=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
-             console.log(rcontent);
-          
-          
+             message=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
+             console.log(message);
+             $.UserName = decodeURIComponent(CookieJDs[i].match(/pt_pin=(.+?);/) && CookieJDs[i].match(/pt_pin=(.+?);/)[1])
+             $.index = i + 1;
           if ($.isNode()) {
-          await notify.sendNotify("京东签到-" + new Date().toLocaleDateString(), rcontent);
+       
+             await notify.sendNotify(`京东签到 - 账号${$.index} - ${$.nickName}`, `${subTitle}${message}`);
+           
            }
           console.log('发送结果完毕');
           
