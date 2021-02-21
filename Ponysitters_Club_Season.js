@@ -96,12 +96,13 @@ async function executeOneByOne() {
             const notify = $.isNode() ?require('./sendNotify') : '';
              rcontent=rcontent.substring(rcontent.indexOf('【签到概览】'),rcontent.indexOf('签到用时'))
              console.log(rcontent);
+             $.msg("京东签到-" + new Date().toLocaleDateString(), '测试下签到')
           $.msg("京东签到-" + new Date().toLocaleDateString(), rcontent)
           console.log('发送结果完毕');
           
           
   } else {
-         console.log('JD');
+         
        console.log(rcontent);
      }
     }
@@ -121,12 +122,8 @@ async function start() {
         return;
     }
   
- console.log('SyncUrl'+SyncUrl)
-   if (SyncUrl) {
-   if (SyncUrl.indexOf(".js")>0) {
-     hcodestr=SyncUrl.substr(SyncUrl.indexOf(".js")-4,4)+"_CODE";   }
-
-}
+ //console.log('SyncUrl'+SyncUrl)
+   
  
   
      
