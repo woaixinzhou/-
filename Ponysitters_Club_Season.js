@@ -103,9 +103,9 @@ async function executeOneByOne() {
              console.log(message);
 
           if ($.isNode()) {
-       
-             await notify.sendNotify(`京东签到 - 账号${$.index} - ${$.nickName}`, `${subTitle}${message}`);
-           
+              subTitle = `【京东账号${$.index}】${$.nickName}`;
+              await notify.sendNotify(`京东签到通知`, `${subTitle}\n${message}`);
+          
            }
           console.log('发送结果完毕');
           
