@@ -123,8 +123,15 @@ async function start() {
       content = fs.readFileSync(path, "utf8");
     }
      
+
     console.log(content);
     console.log("全部执行完毕");
+  if (SyncUrl.indexOf('JD_DailyBonus')>0) {
+    const notify = require('./sendNotify');
+    await notify.msg("京东签到-" + new Date().toLocaleDateString(), content)
+    console.log('发送结果完毕');
+  }
+ 
 }
 
 start();
